@@ -1,0 +1,17 @@
+@(ips : List[String])
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>ip</title>
+    </head>
+    <body>
+        <h1>ip地址报表</h1>
+        <ul>
+        @for(ip <- ips) {
+          <li>@ip</li>
+        }
+        </ul>
+    </body>
+</html>
