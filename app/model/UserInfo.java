@@ -6,9 +6,10 @@ import play.db.ebean.Model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.Constraint;
 
 @Entity
-@Table(name = "userInfo")
+@Table(name = "user_info")
 public class UserInfo extends Model {
     @Id
     @Constraints.Min(1)

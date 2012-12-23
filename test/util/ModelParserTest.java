@@ -13,6 +13,5 @@ public class ModelParserTest {
 
     @Test
     public void should_parse_chat_history(){
-        ModelParser.parseChatHistory(request().body().asJson())
     }
 }

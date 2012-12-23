@@ -1,0 +1,18 @@
+@(answerAndQuestion : domain.MostAppearQuestions)
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>ip</title>
+</head>
+<body>
+<h1>最常见问题</h1>
+<span>回答文：@answerAndQuestion.getAnswer()</span>
+<ul>
+    @for(question <- answerAndQuestion.getQuestions()) {
+    <li>@question</li>
+    }
+</ul>
+</body>
+</html>
