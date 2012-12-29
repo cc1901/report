@@ -5,6 +5,7 @@ import com.avaje.ebean.EbeanServer;
 import model.ChatHistory;
 import model.UserInfo;
 import org.codehaus.jackson.JsonNode;
+import play.Logger;
 import play.mvc.Controller;
 import play.mvc.Result;
 import service.ChatPersistenceService;
@@ -33,6 +34,7 @@ public class Application extends Controller {
         if (json == null) {
             return badRequest("Expecting Json data");
         } else {
+            Logger.info("request json:====" + json.toString());
             new ChatPersistenceService().persist(json);
             return ok();
         }

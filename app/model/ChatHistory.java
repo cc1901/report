@@ -2,6 +2,7 @@ package model;
 
 import play.data.validation.Constraints;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -20,12 +21,15 @@ public class ChatHistory {
     private final String sessionId;
 
     @Constraints.Required
+    @Column(name = "answer", columnDefinition = "text")
     private final String question;
 
     @Constraints.Required
+    @Column(name = "question", columnDefinition = "text")
     private final String answer;
 
     @Constraints.Required
+    @Column(name = "date", columnDefinition = "date")
     private final Date date;
 
     public ChatHistory(String sessionId, String question, String answer, String time) throws ParseException {

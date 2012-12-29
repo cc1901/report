@@ -6,9 +6,9 @@
 create table chat_history (
   id                        bigint auto_increment not null,
   session_id                varchar(255),
-  question                  varchar(255),
-  answer                    varchar(255),
-  date                      datetime,
+  answer                    text,
+  question                  text,
+  date                      date,
   constraint pk_chat_history primary key (id))
 ;
 
